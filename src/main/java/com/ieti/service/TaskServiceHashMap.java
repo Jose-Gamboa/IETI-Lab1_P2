@@ -1,5 +1,6 @@
 package com.ieti.service;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import org.springframework.stereotype.Service;
@@ -12,27 +13,34 @@ public class TaskServiceHashMap  implements TaskService{
 
     @Override
     public Task create(Task task) {
-        return null;
+        tsMap.put(task.getId(), task);
+        return task;
     }
 
     @Override
     public Task findById(String id) {
-        return null;
+        if(tsMap.get(id) == null){return null;}
+        return tsMap.get(id);
     }
 
     @Override
     public List<Task> getAll() {
-        return null;
+        List<Task> response = new ArrayList<Task>();
+        response.addAll(tsMap.values());
+        return response;
     }
 
     @Override
     public boolean deleteById(String id) {
-        return false;
+        if(tsMap.get(id) == null){return false;}
+        tsMap.remove(id);
+        return true;
     }
 
     @Override
     public Task update(Task task, String id) {
-        return null;
+        tsMap.replace(id, task);
+        return task;
     }
     
 }
