@@ -24,3 +24,30 @@
 
     ![TSHM](img/TSHM.png)
 
+    ![TaskContro Impl](img/TaskController%20Impl.png)
+
++ **Endpoints Test**
+
++ Post Test
+
+    ![Post Test](img/Post%20Test.png)
+
++ GetAll Test
+
+    ![Get Test](img/Get%20Test.png)
+
++ GetById Test
+
+    ![Find Test](img/Find%20Test.png)
+
++ Put Test
+
+    ![Update Test](img/Put%20Test.png)
+
++ Delete Test
+
+    ![Delete Test](img/Delete%20Test.png)
+
++ Delete Fail Test
+
+    ![Delete Fail Test](img/Delete%20Fail%20Test.png)

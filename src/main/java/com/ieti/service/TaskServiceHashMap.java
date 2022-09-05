@@ -39,6 +39,7 @@ public class TaskServiceHashMap  implements TaskService{
 
     @Override
     public Task update(Task task, String id) {
+        if (tsMap.get(id) == null){return null;}
         tsMap.replace(id, task);
         return task;
     }
